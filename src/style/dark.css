@@ -1,0 +1,18 @@
+.dark {
+  background-color: #222;
+  color: white;
+}
+
+.sidebar {
+  background-color: #222;
+  border-right: 1px solid white;
+}
+
+.topbar {
+  background-color: #222;
+
+  border-bottom: 1px solid white;
+}
+.user.userShowInfo {
+  color: white;
+}

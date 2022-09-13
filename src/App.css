@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+
+  background-color: black;
+  color: white;
+}
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.css-levciy-MuiTablePagination-displayedRows {
+  color: darkorange;
+}
+
+/* scroll bar */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #222;
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar-thumb {
+  background-color: darkorange;
+
+  box-shadow: 0 -100vh 0 100vh darkorange;
+}
