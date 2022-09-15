@@ -16,16 +16,17 @@
   border: none;
   border-radius: 10px;
   padding: 5px 10px;
-  background-color: darkorange;
+  background-color: #00ADB5;
   cursor: pointer;
+  color: #EEEEEE;
   margin-right: 20px;
 }
 .userListDelete {
-  color: red;
+  color: rgb(232, 70, 70);
   cursor: pointer;
 }
 svg {
-  color: darkorange;
+  color: #EEEEEE;
 }
 .search {
   display: flex;
@@ -41,12 +42,12 @@ input {
   border: none;
   outline: none;
   font-size: 14px;
-  color: darkorange;
+  color: #00ADB5;
   width: 100%;
 }
 ::placeholder {
   font-size: 14px;
-  color: darkorange;
+  color: #00ADB5;
 }
 .searchIcon {
   right: 0;

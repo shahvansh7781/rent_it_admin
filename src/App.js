@@ -41,7 +41,7 @@ function App() {
             <Route path='/user/:userID'>
               <User />
             </Route>
-            <Route path='/products'>
+            <Route path='/cars'>
               <ProductList />
             </Route>
             <Route exact path='/product/:productID'>

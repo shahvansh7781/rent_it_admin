@@ -105,7 +105,7 @@ export default function SideBar() {
               </li>
             </Link>
 
-            <Link to='/products' className='link'>
+            <Link to='/cars' className='link'>
               <li
                 onClick={() => setCurrentLink(5)}
                 className={

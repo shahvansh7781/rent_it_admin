@@ -14,7 +14,7 @@
   box-shadow: 5px 5px 0px 1px #cccccc;
 }
 .featured :hover {
-  background-color: darkorange;
+  background-color: #00ADB5;
 }
 .featuredTitle {
   font-size: 20px;
@@ -41,7 +41,7 @@
 }
 .featuredSub {
   font-size: 14px;
-  color: gray;
+  color: #EEEEEE;
 }
 @media only screen and (max-width: 500px) {
   .featured {

@@ -17,12 +17,13 @@
   border: none;
   border-radius: 10px;
   padding: 5px 10px;
-  background-color: darkorange;
+  background-color: #00ADB5;
+  color: #EEEEEE;
   cursor: pointer;
   margin-right: 20px;
 }
 .productListDelete {
-  color: red;
+  color: rgb(232, 70, 70);
   cursor: pointer;
 }
 .createProduct {

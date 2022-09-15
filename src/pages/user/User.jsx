@@ -57,7 +57,9 @@ export default function User() {
             </div>
           </div>
         </div>
-        <div className='userUpdate'></div>
+        <div className='userUpdate'>
+          
+        </div>
       </div>
     </div>
   )

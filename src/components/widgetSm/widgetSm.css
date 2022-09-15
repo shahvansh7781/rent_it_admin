@@ -43,7 +43,8 @@
   border: none;
   border-radius: 10px;
   padding: 7px 10px;
-  background-color: darkorange;
+  background-color: #00ADB5;
+  color: #EEEEEE;
   cursor: pointer;
 }
 .wigetSmIcon {

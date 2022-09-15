@@ -27,8 +27,9 @@
   color: darkgreen;
 }
 .widgetLgBtn.Declined {
-  background-color: lightcoral;
-  color: red;
+  /* background-color: lightcoral; */
+  background-color: red;
+  color: white;
 }
 .widgetLgTable {
   width: 100%;

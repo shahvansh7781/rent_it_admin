@@ -1,43 +1,43 @@
-import React, { useState } from 'react'
-import './UserList.css'
+import React, { useState,useEffect } from "react";
+import "./UserList.css";
 
-import { DataGrid } from '@mui/x-data-grid'
-import { userRows } from '../../data'
+import { DataGrid } from "@mui/x-data-grid";
+import { userRows } from "../../data";
 
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 
-import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline'
-import { Search } from '@mui/icons-material'
+import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
+import { Search } from "@mui/icons-material";
 
 export default function UserList() {
-  const [data, setData] = useState(userRows)
+  const [data, setData] = useState(userRows);
 
   const handleDelete = (id) => {
-    setData(data.filter((item) => item.id !== id))
-  }
+    setData(data.filter((item) => item.id !== id));
+  };
 
   // const array = []
 
   // const newData = array.concat(search(data))
 
   const columns = [
-    { field: 'id', headerName: 'ID', width: 100 },
+    { field: "id", headerName: "User ID", width: 120 },
     {
-      field: 'avtar',
-      headerName: 'Profile',
-      width: 100,
+      field: "avtar",
+      headerName: "Profile",
+      width: 130,
       renderCell: (params) => {
         return (
-          <div className='userListUser'>
-            <img className='userListImg' src={params.row.avtar} alt='' />
+          <div className="userListUser">
+            <img className="userListImg" src={params.row.avtar} alt="" />
           </div>
-        )
+        );
       },
     },
 
     {
-      field: 'username',
-      headerName: 'UserName',
+      field: "username",
+      headerName: "Name",
       width: 200,
       // renderCell: (params) => {
       //   return (
@@ -48,50 +48,45 @@ export default function UserList() {
       //   )
       // },
     },
-    { field: 'email', headerName: 'Email-ID', width: 130 },
+    { field: "email", headerName: "Email-ID", width: 130 },
     {
-      field: 'status',
-      headerName: 'Status',
+      field: "role",
+      headerName: "Role",
 
-      width: 90,
+      width: 110,
     },
-    {
-      field: 'transaction',
-      headerName: 'Transactions',
 
-      width: 90,
-    },
     {
-      field: 'action',
-      headerName: 'Action',
+      field: "action",
+      headerName: "Action",
       width: 150,
       renderCell: (params) => {
         return (
           <>
-            <Link to={'/user/' + params.row.id}>
-              <button className='userListEdit'>Edit</button>
+            <Link to={"/user/" + params.row.id}>
+              <button className="userListEdit">Edit</button>
             </Link>
 
             <DeleteOutlineIcon
-              className='userListDelete'
+              className="userListDelete"
               onClick={() => handleDelete(params.row.id)}
             />
           </>
-        )
+        );
       },
     },
-  ]
+  ];
 
-  const [query, setQuery] = useState('')
+  const [query, setQuery] = useState("");
 
-  const keys = ['User', 'Email-ID']
+  const keys = ["User", "Email-ID"];
 
   const search = (data) => {
-    return data.filter((item) => keys.some((key) => item[key](query)))
-  }
+    return data.filter((item) => keys.some((key) => item[key](query)));
+  };
 
   return (
-    <div className='userList'>
+    <div className="userList">
       {/* <div className='search'>
         <div className='searchRight'>
           <input
@@ -107,14 +102,14 @@ export default function UserList() {
       </div> */}
       {/* console.log(Search(data)) */}
       <DataGrid
-        style={{ color: 'darkorange' }}
+        style={{ color: "#EEEEEE" }}
         rows={data}
         disableSelectionOnClick
         columns={columns}
-        pageSize={8}
-        rowsPerPageOptions={[5]}
-        checkboxSelection
+        // pageSize={8}
+        // rowsPerPageOptions={[5]}
+        // checkboxSelection
       />
     </div>
-  )
+  );
 }

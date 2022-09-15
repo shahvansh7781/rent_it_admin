@@ -1,7 +1,8 @@
 .container {
   display: flex;
 
-  background-color: black;
+  /* background-color: black; */
+  background-color: #222831;
   color: white;
 }
 .link {
@@ -10,7 +11,7 @@
 }
 
 .css-levciy-MuiTablePagination-displayedRows {
-  color: darkorange;
+  color: #00ADB5;
 }
 
 /* scroll bar */
@@ -20,7 +21,7 @@
   scroll-behavior: smooth;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: darkorange;
+  background-color: #00ADB5;
 
-  box-shadow: 0 -100vh 0 100vh darkorange;
+  box-shadow: 0 -100vh 0 100vh #00ADB5;
 }
