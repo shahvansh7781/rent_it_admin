@@ -16,7 +16,7 @@ export default function ProductList() {
 
   const getCars = async () => {
     const cars1 = [];
-    await axios.get("http://localhost:5000/myapp/cars").then((car) => {
+    await axios.get("/myapp/cars").then((car) => {
       Object.values(car.data)[1].map((e) => {
         cars1.push({
           id: e._id,
