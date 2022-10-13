@@ -50,7 +50,7 @@ function App() {
             <Route exact path='/product/:productID'>
               <Product />
             </Route>
-            <Route exact path='/newproduct'>
+            <Route exact path='/myapp/admin/car/new'>
               <NewProduct />
             </Route>
             <Route exact path='/feedbacks'>

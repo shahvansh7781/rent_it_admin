@@ -96,7 +96,7 @@ export default function ProductList() {
   return (
     <div className="productList">
       <div className="createProduct">
-        <Link to="/newproduct">
+        <Link to="/myapp/admin/car/new">
           <button className="productAddButton">Create</button>
         </Link>
       </div>
