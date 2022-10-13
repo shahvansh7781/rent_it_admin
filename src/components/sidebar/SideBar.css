@@ -34,10 +34,14 @@
 .sidebarListItem.active,
 .sidebarListItem:hover {
 <<<<<<< HEAD
+<<<<<<< HEAD
   background-color: #00ADB5;
 =======
   background-color: #229e03;
 >>>>>>> d5c1859 (commit by gautam)
+=======
+  background-color: #229e03;
+>>>>>>> ddb12f7 (commit by dharu boi)
   /* color: black; */
   font-weight: bold;
 }
