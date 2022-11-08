@@ -20,17 +20,19 @@ import Feedback from './pages/feedback/Feedback'
 import DetailFeedback from './pages/detailFeedback/detailFeedback'
 import { useContext, useState } from 'react'
 import { DarkModeContext } from './context/context'
+import BookingList from './pages/bookinglist/BookingList'
 
 function App() {
   const { darkMode } = useContext(DarkModeContext)
 
   return (
-    <div className={darkMode ? 'app dark' : 'app'}>
+    <div style={{width:"100%",backgroundColor:"#222831"}}>
       <Router>
         <Topbar />
 
         <div className='container'>
           <SideBar />
+          <div style={{width:"80%",backgroundColor:"#222831"}}>
           <Switch>
             <Route exact path='/'>
               <Home />
@@ -50,16 +52,17 @@ function App() {
             <Route exact path='/product/:productID'>
               <Product />
             </Route>
-            <Route exact path='/myapp/admin/car/new'>
+            <Route exact path='/admin/car/new'>
               <NewProduct />
             </Route>
-            <Route exact path='/feedbacks'>
-              <Feedback />
+            <Route exact path='/bookings'>
+              <BookingList/>
             </Route>
             <Route exact path='/feedback/:id'>
               <DetailFeedback />
             </Route>
           </Switch>
+          </div>
         </div>
       </Router>
     </div>

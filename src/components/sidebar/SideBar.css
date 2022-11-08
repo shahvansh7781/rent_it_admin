@@ -1,11 +1,11 @@
 .sidebar {
-  flex: 1;
   height: calc(100vh - 50px);
   /* background-color: black; */
   background-color: #222831;
   position: sticky;
   top: 50px;
   border-right: 2px solid white;
+  width: 20%;
 }
 .sidebarWrapper {
   padding: 20px;

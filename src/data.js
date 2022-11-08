@@ -2,51 +2,51 @@ import axios from "axios";
 export const chartData = [
   {
     Month: "Jan",
-    Sales: 4000,
+    "Total Amount": 4000,
   },
   {
     Month: "Feb",
-    Sales: 1000,
+    "Total Amount": 1000,
   },
   {
     Month: "March",
-    Sales: 400,
+    "Total Amount": 400,
   },
   {
     Month: "April",
-    Sales: 4900,
+    "Total Amount": 4900,
   },
   {
     Month: "May",
-    Sales: 10000,
+    "Total Amount": 10000,
   },
   {
     Month: "June",
-    Sales: 1000,
+    "Total Amount": 1000,
   },
   {
     Month: "July",
-    Sales: 4070,
+    "Total Amount": 4070,
   },
   {
     Month: "Aug",
-    Sales: 480,
+    "Total Amount": 480,
   },
   {
     Month: "Sept",
-    Sales: 40,
+    "Total Amount": 40,
   },
   {
     Month: "Oct",
-    Sales: 0,
+    "Total Amount": 0,
   },
   {
     Month: "Nov",
-    Sales: 4090,
+    "Total Amount": 4090,
   },
   {
     Month: "Dec",
-    Sales: 8000,
+    "Total Amount": 8000,
   },
 ];
 

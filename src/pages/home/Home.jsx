@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className='home'>
       <FeaturedInfo />
-      <Chart data={chartData} title='Sales Analytics' grid dataKey='Sales' />
+      <Chart data={chartData} title='Sales Analytics' grid dataKey='Total Amount' />
       <div className='homeWidgets'>
         <WidgetSm />
         <WidgetLg />

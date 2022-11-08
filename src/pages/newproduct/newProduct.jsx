@@ -44,14 +44,6 @@ export default function newProduct() {
               <input type="text" name="rent" required />
             </div>
             <div className="addProductItem1">
-              <label>Featured</label>
-
-              <select name="featured" id="">
-                <option value="true">True</option>
-                <option value="false">False</option>
-              </select>
-            </div>
-            <div className="addProductItem1">
               <label>Number Plate</label>
 
               <input
@@ -116,10 +108,6 @@ export default function newProduct() {
               </select>
             </div>
           </div>
-        </div>
-        <div className="addProductItem">
-          <label>Stock</label>
-          <input type="number" placeholder="3" name="stock" required />
         </div>
         <div className="addProductItem">
           <label>Features</label>

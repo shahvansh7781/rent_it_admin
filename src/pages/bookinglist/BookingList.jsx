@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./ProductList.css";
+import "./BookingList.css";
 
 import { DataGrid } from "@mui/x-data-grid";
 import { productRows } from "../../data";
@@ -10,7 +10,7 @@ import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import { calculateNewValue } from "@testing-library/user-event/dist/utils";
 
-export default function ProductList() {
+export default function BookingList() {
   // const [data, setData] = useState(productRows);
   const [cars, setCars] = useState([]);
 
@@ -39,7 +39,7 @@ export default function ProductList() {
   };
 
   const columns = [
-    { field: "id", headerName: "Car ID", minWidth: 200,flex:0.3 },
+    { field: "id", headerName: "Booking ID", minWidth: 180,flex:0.2 },
     // {
     //   field: "img",
     //   headerName: "Image",
@@ -54,9 +54,8 @@ export default function ProductList() {
     // },
     {
       field: "title",
-      headerName: "Car Name",
-      minWidth: 130,
-      flex:0.2
+      headerName: "Car ID",
+      minWidth: 180,flex:0.2
       // renderCell: (params) => {
       //   return (
       //     <div className='productListItem'>
@@ -66,41 +65,37 @@ export default function ProductList() {
       //   )
       // },
     },
+    { field: "noPlate", headerName: "User ID", minWidth: 180,flex:0.2 },
     {
       field: "rent",
-      headerName: "Rent",
+      headerName: "Amount",
 flex:0.1,
-      minWidth: 140,
+      minWidth: 160,
     },
-    {
-      field: "action",
-      headerName: "Action",
-      minWidth: 150,
-      renderCell: (params) => {
-        return (
-          <>
-            <Link to={"/product/" + params.row.id}>
-              <button className="productListEdit">Edit</button>
-            </Link>
+    // {
+    //   field: "action",
+    //   headerName: "Action",
+    //   width: 150,
+    //   renderCell: (params) => {
+    //     return (
+    //       <>
+    //         <Link to={"/product/" + params.row.id}>
+    //           <button className="productListEdit">Edit</button>
+    //         </Link>
 
-            <DeleteOutlineIcon
-              className="productListDelete"
-              onClick={() => handleDelete(params.row.id)}
-            />
-          </>
-        );
-      },
-    },
+    //         <DeleteOutlineIcon
+    //           className="productListDelete"
+    //           onClick={() => handleDelete(params.row.id)}
+    //         />
+    //       </>
+    //     );
+    //   },
+    // },
   ];
   return (
     <div className="productList">
-      <div className="createProduct">
-        <Link to="/admin/car/new">
-          <button className="productAddButton">Create</button>
-        </Link>
-      </div>
       <DataGrid
-        style={{ color: "#EEEEEE", height: "95vh",width:"100%" }}
+        style={{ color: "#EEEEEE", height: "95vh" }}
         rows={cars}
         disableSelectionOnClick
         columns={columns}

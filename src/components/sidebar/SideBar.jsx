@@ -38,19 +38,19 @@ export default function SideBar() {
                 }
               >
                 <LineStyleIcon className='sidebarIcon' />
-                Home
+                Dashboard
               </li>
             </Link>
 
-            <Link to='/' className='link'>
+            {/* <Link to='/' className='link'>
               <li
                 onClick={() => {
                   setCurrentLink(2)
                   window.scrollTo({
                     top: 150,
                     behavior: 'smooth',
-                    /* you can also use 'auto' behaviour
-         in place of 'smooth' */
+                     you can also use 'auto' behaviour
+         in place of 'smooth' 
                   })
                 }}
                 className={
@@ -62,17 +62,17 @@ export default function SideBar() {
                 <TimelineIcon className='sidebarIcon' />
                 Analytics
               </li>
-            </Link>
+            </Link> */}
 
-            <Link to='/' className='link'>
+            {/* <Link to='/' className='link'>
               <li
                 onClick={() => {
                   setCurrentLink(3)
                   window.scrollTo({
                     top: 0,
                     behavior: 'smooth',
-                    /* you can also use 'auto' behaviour
-         in place of 'smooth' */
+                     you can also use 'auto' behaviour
+         in place of 'smooth' 
                   })
                 }}
                 className={
@@ -84,11 +84,60 @@ export default function SideBar() {
                 <TrendingUpIcon className='sidebarIcon' />
                 Sales
               </li>
+            </Link> */}
+            <Link to='/users' className='link'>
+              <li
+                onClick={() => setCurrentLink(2)}
+                className={
+                  currentLink === 2
+                    ? 'sidebarListItem active'
+                    : 'sidebarListItem'
+                }
+              >
+                <GroupIcon className='sidebarIcon' />
+                Users
+              </li>
+            </Link>
+
+            <Link to='/cars' className='link'>
+              <li
+                onClick={() => setCurrentLink(3)}
+                className={
+                  currentLink === 3
+                    ? 'sidebarListItem active'
+                    : 'sidebarListItem'
+                }
+              >
+                <CarRentalIcon className='sidebarIcon' />
+                Cars
+              </li>
+            </Link>
+
+            <Link to='/bookings' className='link'>
+              <li
+                onClick={() => {
+                  setCurrentLink(4)
+                  window.scrollTo({
+                    top: 600,
+                    behavior: 'smooth',
+                    /* you can also use 'auto' behaviour
+         in place of 'smooth' */
+                  })
+                }}
+                className={
+                  currentLink === 4
+                    ? 'sidebarListItem active'
+                    : 'sidebarListItem'
+                }
+              >
+                <AttachMoneyIcon className='sidebarIcon' />
+                Bookings
+              </li>
             </Link>
           </ul>
         </div>
 
-        <div className='sidebarMenu'>
+        {/* <div className='sidebarMenu'>
           <h3 className='sidebarTitle'>Quick Menu</h3>
           <ul className='sidebarList'>
             <Link to='/users' className='link'>
@@ -126,8 +175,8 @@ export default function SideBar() {
                   window.scrollTo({
                     top: 600,
                     behavior: 'smooth',
-                    /* you can also use 'auto' behaviour
-         in place of 'smooth' */
+                     you can also use 'auto' behaviour
+         in place of 'smooth' 
                   })
                 }}
                 className={
@@ -155,7 +204,7 @@ export default function SideBar() {
               </li>
             </Link>
           </ul>
-        </div>
+        </div> */}
       </div>
     </div>
   )

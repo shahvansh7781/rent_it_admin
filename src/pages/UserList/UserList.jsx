@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./UserList.css";
 
 import { DataGrid } from "@mui/x-data-grid";
@@ -21,24 +21,25 @@ export default function UserList() {
   // const newData = array.concat(search(data))
 
   const columns = [
-    { field: "id", headerName: "User ID", width: 120 },
-    {
-      field: "avtar",
-      headerName: "Profile",
-      width: 130,
-      renderCell: (params) => {
-        return (
-          <div className="userListUser">
-            <img className="userListImg" src={params.row.avtar} alt="" />
-          </div>
-        );
-      },
-    },
+    { field: "id", headerName: "User ID", minWidth: 150,flex:0.2 },
+    // {
+    //   field: "avtar",
+    //   headerName: "Profile",
+    //   width: 130,
+    //   renderCell: (params) => {
+    //     return (
+    //       <div className="userListUser">
+    //         <img className="userListImg" src={params.row.avtar} alt="" />
+    //       </div>
+    //     );
+    //   },
+    // },
 
     {
       field: "username",
       headerName: "Name",
-      width: 200,
+      minWidth: 130,
+      flex:0.2
       // renderCell: (params) => {
       //   return (
       //     <div className='userListUser'>
@@ -48,18 +49,19 @@ export default function UserList() {
       //   )
       // },
     },
-    { field: "email", headerName: "Email-ID", width: 130 },
+    { field: "email", headerName: "Email-ID", minWidth: 150,flex:0.1 },
     {
       field: "role",
       headerName: "Role",
-
-      width: 110,
+      flex:0.1,
+      minWidth: 90,
     },
 
     {
       field: "action",
       headerName: "Action",
-      width: 150,
+      flex:0.2,
+      minWidth: 150,
       renderCell: (params) => {
         return (
           <>
@@ -102,7 +104,7 @@ export default function UserList() {
       </div> */}
       {/* console.log(Search(data)) */}
       <DataGrid
-        style={{ color: "#EEEEEE" }}
+        style={{ color: "#EEEEEE", height: "95vh" }}
         rows={data}
         disableSelectionOnClick
         columns={columns}
