@@ -23,13 +23,8 @@ export default function Chart({ title, data, dataKey, grid }) {
           <Area
             type='monotone'
             dataKey={dataKey}
-<<<<<<< HEAD
             stroke='#00ADB5'
             fill='#00ADB5'
-=======
-            stroke='yellow'
-            fill='yellow'
->>>>>>> ddb12f7 (commit by dharu boi)
           />
           <Tooltip />
           {grid && <CartesianGrid strokeDasharray='5 5' />}
